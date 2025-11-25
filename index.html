@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MovieGuessor 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-slate-100 text-slate-900">
+    <header class="header">
+      <div class="header-logo">🎬 MovieGuessor</div>
+      <p class="header-subtitle">Can you guess today's movie from the blurred poster?</p>
+    </header>
+
+    <main class="layout">
+      <section class="main-panel">
+        <div class="top-bar">
+          <span class="badge">Today's Challenge</span>
+          <span id="current-date" class="muted"></span>
+        </div>
+
+        <form id="guess-form" class="guess-form">
+          <label for="guess-input" class="sr-only">Enter your guess</label>
+          <input
+            id="guess-input"
+            type="text"
+            placeholder="Type movie title..."
+            autocomplete="off"
+          />
+          <button type="submit">Guess</button>
+        </form>
+
+        <ul id="autocomplete-list" class="autocomplete-list"></ul>
+
+        <div class="status-row">
+          <span>Guesses remaining: <span id="guesses-remaining"></span></span>
+          <span id="feedback" class="feedback"></span>
+        </div>
+
+        <div class="controls-row">
+          <button id="play-again" type="button" class="secondary-button" disabled>
+            Play again
+          </button>
+        </div>
+
+        <div class="poster-card">
+          <div id="poster-blur" class="poster-blur"></div>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <h2>Hints</h2>
+        <ul class="hint-list">
+          <li class="hint-item" data-hint="box_office">Box Office: <span></span></li>
+          <li class="hint-item" data-hint="genre">Genre: <span></span></li>
+          <li class="hint-item" data-hint="year">Year: <span></span></li>
+          <li class="hint-item" data-hint="director">Director: <span></span></li>
+          <li class="hint-item" data-hint="main_actor">Main Actor: <span></span></li>
+        </ul>
+
+        <div class="how-to-play">
+          <h3>How to Play</h3>
+          <ul>
+            <li>Type a movie title and press Guess.</li>
+            <li>Hints unlock after incorrect attempts.</li>
+            <li>You have limited guesses good luck!</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <span>🎬 MovieGuessor· A new movie every day</span>
+    </footer>
+
+      <script src="data/titles.js"></script>
+    <script src="data/movies.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
