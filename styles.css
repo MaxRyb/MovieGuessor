@@ -260,4 +260,47 @@ body::before {
   .layout {
     grid-template-columns: minmax(0, 1fr);
   }
+
+  .header {
+    padding: 0.5rem 1rem;
+  }
+
+  .header-logo {
+    font-size: 1rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .main-panel {
+    order: 2;
+  }
+
+  .poster-card {
+    padding-top: 0.75rem;
+  }
+
+  .sidebar {
+    order: 3;
+    margin-top: 0.25rem;
+  }
+
+  /* On mobile, show poster first, guessing UI below it */
+  .main-panel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .poster-card {
+    order: 1;
+  }
+
+  .top-bar,
+  .guess-form,
+  .autocomplete-list,
+  .status-row,
+  .controls-row {
+    order: 2;
+  }
 }
